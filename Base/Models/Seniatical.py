@@ -3,8 +3,8 @@ Hello There...
 """
 
 ''' Imports '''
-from Encrypter import *
-from Decrypter import *
+from Encryption_Patterns.Sen_encrypt import *
+from Encryption_Patterns.Sen_decrypt import *
 
 '''
 Globals
