@@ -1,5 +1,5 @@
 import warnings
-import templars
+import Base.templars as templars
 
 __slots__ = ('complexity', 'hashes', 'is_same')
 
@@ -23,10 +23,6 @@ def hash_check(cls):
                 warnings.warn('Key "{}" has identified extra pairs of arguments!'.format(hash), category=templars.TooManyArgs)
             if is_same and type(hashes[hash]) == list:
                 raise TypeError('Hash "{}" has identified an error, listed arguments, is_same is True. Please make sure you set is_same as False'.format(hash))
-            if not is_same and type(hashes[hash]) == list and len(hashes[hash]) < 2:
-                raise TypeError('Hash "{}" has identified an error, arguments for listed component are below!'.format(hash))
-            if not is_same and type(hashes[hash]) == list and len(hashes[hash]) == 2 and type(hashes[hash][1]) != int:
-                raise TypeError('Hash "{}" has identified an error, left hand argument must be a integer')
             if not is_same and type(hashes[hash]) == list and len(hashes[hash]) == 2 and type(hashes[hash][0]) != str:
                 raise TypeError('Hash "{}" has identified an error, right hand argument must be a string')
         
