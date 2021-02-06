@@ -1,6 +1,8 @@
 # Zeta
 A simple module which allows you to make your own hashes and encryptions, whilst still allowing you to play around other ciphers and hashes!
 
+As for now just do `pip install git+https://github.com/Seniatical/Zeta/`
+
 **Base Model Usage:**
 ```py
 >>> from Zeta.Base import Models
