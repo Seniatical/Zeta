@@ -42,7 +42,19 @@ def _push(letter: str, push: int) -> str:
         else:
             index = push + current_pos
     else:
-        raise UnicodeError(f'Cannot find char {letter}')
+        raise UnicodeError(
+                reason=f'Cannot find char {letter}',
+                encoding=None, start=letter, end=letter ## Just for if they want it?
+                object=letter,
+        )
+        ## Allows us to read the exception like
+        '''
+        try:
+            letter = _push(letter, 1)
+        except UnicodeError as error:
+            cause = letter
+            reason = reason
+        '''
     new_letter = char_set[index]
     return new_letter
 
