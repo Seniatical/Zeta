@@ -15,7 +15,7 @@ A simple module which allows you to make your own hashes and encryptions, whilst
 
 'Hello, World!'
 ```
-**.** If you would like to see all the base models so far just simply do this `Models.models`
+**.** If you would like to see all the base models so far just simply do this `Models.__models__`
 
 **.** With this module you can also create and use your own hashes and encryptions!
 
