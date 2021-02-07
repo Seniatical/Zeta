@@ -1,3 +1,0 @@
-**Seniaticals Encryption**
-```py
-```
