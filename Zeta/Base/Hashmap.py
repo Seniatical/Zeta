@@ -43,8 +43,9 @@ def check_key(key, is_same):
         return False
     return True
 
-@hash_check
+## @hash_check
 class Hashmap:
+    @hash_check ## Probably does more justice on this part.
     def __init__(self, complexity: int, hashes: dict, is_same: bool=True) -> ' \
 complexity -> How long is each word in the hashmap, If same is false provide the avg amt \
 hashes -> The dict containing the hashes. \
