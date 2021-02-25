@@ -1,8 +1,6 @@
 import warnings
 from Zeta.Base import templars
 
-__slots__ = ('complexity', 'hashes', 'is_same')
-
 def hash_check(cls):
 
     def static(complexity: int, hashes: int, is_same: bool = True):
@@ -45,6 +43,8 @@ def check_key(key, is_same):
 
 ## @hash_check
 class Hashmap:
+    __slots__ = ('complexity', 'hashes', 'is_same')
+    
     @hash_check ## Probably does more justice on this part.
     def __init__(self, complexity: int, hashes: dict, is_same: bool=True) -> ' \
 complexity -> How long is each word in the hashmap, If same is false provide the avg amt \
